@@ -6,7 +6,7 @@ Video Demo: <br>
 
 
 ## Overview
-OdieEngine is a 3D Game Engine built with my DirectX11 Graphics API. This project aimed to make efficient systems for:
+OdieEngine is a 3D Game Engine built with my DirectX11 [Graphics API](https://github.com/odzyoba4/DXGraphicsAPI). This project aimed to make efficient systems for:
 - Creating and controlling scenes
 - Rendering
 - Collision processing
