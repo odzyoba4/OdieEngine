@@ -20,7 +20,7 @@ These systems were made with a combination of design patterns, including command
  <br/>
 
 <br/>
-Class diagram including the GameObject system, which is an inheritable class for object wishing to use detect collision, inputs, update and draw calls, or alarms:
+Class diagram including the GameObject system, which is an inheritable class for objects wishing to use collision detection, inputs, update and draw calls, or alarms:
 
 ![OdieClassDiagram](/images/ClassDiagram.png)
 
@@ -33,7 +33,7 @@ Class Diagram: <br/>
 ![CollisionDemo](/images/OdieCollision.PNG)
 
 <br/>
-These volumes were then tested against each other by using the visitor pattern. In this test, two unknown collision volumes call each others Accept and Visit intersection functions, which allows the base class comparison to become a known derived class intersection test:
+These volumes were then tested against each other by using the visitor pattern. In this test, two unknown collision volumes call each other's Accept and Visit intersection functions, which allows the base class comparison to become a known derived class intersection test:
 <br/>
 
 
@@ -45,7 +45,7 @@ These volumes were then tested against each other by using the visitor pattern. 
 The key input recognition system was designed to limit how much testing is done per frame for key presses. I used the command pattern to create a centralized key event manager, which was defined by a single key and an event (Pressed, Released, Held Down). This manager was responsible for registering Inputables (a sub-class of the GameObject) to Single Key Event Managers, which were responsible for detecting events for a unique key. <br>
 ![OdieKey](/images/KeyInput.png)
 
-This way, while there is more registration done, the process to detect a key only happens once per frame, no matter how many object need to know about the key event. Here is the detection that happens for a SingleKeyEventManager, after which it calls back all the necessary Inputable objects to inform them of a key event:
+This way, while there is more registration done, the process to detect a key only happens once per frame, no matter how many objects need to know about the key event. Here is the detection that happens for a SingleKeyEventManager, after which it calls back all the necessary Inputable objects to inform them of a key event:
 
 
 ```C++
